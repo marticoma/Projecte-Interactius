@@ -10,8 +10,9 @@ public class TrackingReceiver : MonoBehaviour
     //GameObjects to be controlled with Posenet
     public GameObject nose;
     public GameObject wristR;
-    public GameObject WristL;
-
+    public GameObject wristL;
+   public GameObject elbowR;
+    public GameObject elbowL;
     //OSC Variables
     private OSCReceiver _receiver;
     private const string _oscAddress = "/pose/0";
@@ -44,6 +45,8 @@ public class TrackingReceiver : MonoBehaviour
         pose.Add("nose", Vector3.zero);
         pose.Add("rightWrist", Vector3.zero);
         pose.Add("leftWrist", Vector3.zero);
+        pose.Add("rightElbow", Vector3.zero);
+        pose.Add("leftElbow", Vector3.zero);
     }
     
 
@@ -52,7 +55,9 @@ public class TrackingReceiver : MonoBehaviour
     {
         nose.transform.position = pose["nose"];
         wristR.transform.position = pose["rightWrist"];
-        WristL.transform.position = pose["leftWrist"];
+        wristL.transform.position = pose["leftWrist"];
+        elbowL.transform.position = pose["leftElbow"];
+        elbowR.transform.position = pose["rightElbow"];
 
     }
 
