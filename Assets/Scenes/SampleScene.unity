@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -512,7 +512,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 635780069aba85c4fa732fa35430125d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 300
 --- !u!65 &426506736
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -526,6 +525,60 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.016995829, y: 0.0147663895, z: 0.013207789}
   m_Center: {x: 0.00019443082, y: 0.0010620949, z: 0}
+--- !u!1 &515876220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 515876222}
+  - component: {fileID: 515876221}
+  m_Layer: 0
+  m_Name: Spawn Fruits
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &515876221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515876220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95ea4b1f5f072654a8080aaadb34739e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fruitPrefab:
+  - {fileID: 1763817136346132, guid: 0f3575c567ebe8241a4a6ad511fd7017, type: 3}
+  - {fileID: 1541859410316496, guid: 4fe5a7bcbee1651418ea031a87ff53e4, type: 3}
+  - {fileID: 1724972533694550, guid: 63e523ab5d9ce7348b431ae1d689a54d, type: 3}
+  - {fileID: 1125202155953082, guid: 573bb482e4baeec4386587db7cc07515, type: 3}
+  - {fileID: 1369001872449898, guid: 2f2e54b9f3898eb46a0b47f9a4d4c52b, type: 3}
+  Z: 0
+  start_y: -700
+  lim_x_neg: -700
+  lim_x_pos: 500
+  timeBetweenSpawns: 1
+--- !u!4 &515876222
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515876220}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &694885986 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1763817136346132, guid: 0f3575c567ebe8241a4a6ad511fd7017,
@@ -544,7 +597,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.01
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -579,7 +632,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 635780069aba85c4fa732fa35430125d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 300
 --- !u!1 &695495337
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,7 +821,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &725601076
 Transform:
   m_ObjectHideFlags: 0
@@ -977,7 +1029,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &900030640
 Transform:
   m_ObjectHideFlags: 0
@@ -1047,7 +1099,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 635780069aba85c4fa732fa35430125d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 300
 --- !u!65 &918079958
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1159,7 +1210,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1007572520
 Transform:
   m_ObjectHideFlags: 0
@@ -1627,6 +1678,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: pear
       objectReference: {fileID: 0}
+    - target: {fileID: 1763817136346132, guid: 0f3575c567ebe8241a4a6ad511fd7017, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1763817136346132, guid: 0f3575c567ebe8241a4a6ad511fd7017, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4228012861393828, guid: 0f3575c567ebe8241a4a6ad511fd7017, type: 3}
       propertyPath: m_LocalPosition.x
       value: -517
@@ -1888,7 +1947,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 635780069aba85c4fa732fa35430125d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 300
 --- !u!65 &1850438065
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2281,7 +2339,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 635780069aba85c4fa732fa35430125d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 300
 --- !u!65 &2067680445
 BoxCollider:
   m_ObjectHideFlags: 0

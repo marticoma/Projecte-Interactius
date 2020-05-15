@@ -6,25 +6,38 @@ using UnityEngine;
 public class sphereCollect : MonoBehaviour
 {
 
-    public float speed;
-    private Vector3 direction;
+    float CheckForce()
+    {
+        Vector3 pos = gameObject.transform.position;
+        float x = Mathf.Abs(pos.x);
+        if(pos.x > 0)
+        {
+            x *= -1;
+        }
 
+        return 15*x;
+    }
     // Start is called before the first frame update
     void Start()
     {
-        float xDirection = -transform.position.normalized.x + Random.Range(-0.7f, 0.7f);
-        float yDirection = -transform.position.normalized.y + Random.Range(-0.7f, 0.7f); ;
-        direction = new Vector3(xDirection, 0, yDirection);
+        float x = CheckForce();
+        float y = 25000 + Mathf.Abs(x);
+        Vector3 force = new Vector3(x, y, 0);
+        gameObject.GetComponent<Rigidbody>().AddForce(force);
+        gameObject.GetComponent<Rigidbody>().useGravity = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(direction * speed * Time.deltaTime);
+        gameObject.GetComponent<Rigidbody>().AddForce(0, -50, 0);
+        if (gameObject.transform.position.y < -700)
+            Destroy(gameObject, 0);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject, 0);
+        if(other.tag == "Weapon")
+            Destroy(gameObject, 0);
     }
 }
