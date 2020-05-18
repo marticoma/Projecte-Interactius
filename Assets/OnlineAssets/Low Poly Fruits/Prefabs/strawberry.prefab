@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7726450423347632908}
   m_Layer: 0
   m_Name: strawberry
-  m_TagString: Untagged
+  m_TagString: FruitTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,3 +123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 635780069aba85c4fa732fa35430125d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particlesSys: {fileID: 2121028638598757579, guid: a26071268ca04e84b9dbe3e7fb62af89,
+    type: 3}
+  type: 0

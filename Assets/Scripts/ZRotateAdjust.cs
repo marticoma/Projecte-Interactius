@@ -12,8 +12,8 @@ public class ZRotateAdjust : MonoBehaviour
     public GameObject origin;
     public GameObject ending; 
     // Start is called before the first frame update
-    private Vector3 standingStillDirection = new Vector3(0.0f,1.0f,0.0f);
-    private Vector3 rotationAxis = new Vector3(0.0f,0.0f,1.0f);
+    private Vector3 standingStillDirection = new Vector3(0.0f,1.0f,0.0f); // if no rotation object should be facind this direction
+    private Vector3 rotationAxis = new Vector3(0.0f,0.0f,1.0f); 
 
     void Start()
     {
