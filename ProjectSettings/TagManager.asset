@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Weapon
   - FruitTag
+  - GreenFruit
+  - Bomb
   layers:
   - Default
   - TransparentFX
