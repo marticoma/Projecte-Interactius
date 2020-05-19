@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Fruit : MonoBehaviour
 {
-    public enum eFruitType { RED, YELLOW, GREEN };
+    public enum eFruitType { RED, YELLOW, GREEN, BOMB };
 
     public GameObject particlesSys; // particle system prefab
     public static float fruitSpeed = 500;
@@ -61,6 +61,9 @@ public class Fruit : MonoBehaviour
                 break;
             case eFruitType.YELLOW:
                 rgb = new Vector3 (1.0f,1.0f,0.0f);
+                break;
+            default:
+                rgb = new Vector3(0.0f, 0.0f, 0.0f);
                 break;
         }
 

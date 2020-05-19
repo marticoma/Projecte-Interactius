@@ -116,7 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particlesSys: {fileID: 2121028638598757579, guid: a26071268ca04e84b9dbe3e7fb62af89,
     type: 3}
-  type: 0
+  type: 3
 --- !u!54 &4828635203011604448
 Rigidbody:
   m_ObjectHideFlags: 0
