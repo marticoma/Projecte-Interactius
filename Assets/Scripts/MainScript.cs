@@ -6,10 +6,11 @@ using UnityEngine.UI;
 public class MainScript : MonoBehaviour
 {
     static public MainScript instance;
-    public int count;
+    public int score;
     public int lives;
+    public float timer; // in seconds
     public Text textCount;
-    public Text textLives;
+    public Text textTimer;
 
 
     // on awake -> just one copy
@@ -22,16 +23,21 @@ public class MainScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        count = 0;
+        score = 0;
         lives = 3;
+        timer = 120;
     }
 
     // Update is called once per frame
     void Update()
     {
-        textCount.text = "Score: " + count.ToString();
-        textLives.text = "Lives: " + lives.ToString();
-        
+        textCount.text = score.ToString();
+        timer -= Time.deltaTime;
+
+        if (timer < 0.0f){ timer = 0.0f;}
+        int minutes = (int)(timer /60);
+        float seconds = timer - ( minutes * 60 );
+        textTimer.text = minutes.ToString() + " : " + seconds.ToString("F3"); 
     
     }
 }

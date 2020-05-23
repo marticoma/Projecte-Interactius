@@ -29,7 +29,7 @@ public class Weapon : MonoBehaviour
             for (int i = 0; i < fruitTypesList.Count; i++){
                 if (fruitTypesList[i] == fruitType){ // type found -> cut fruit
                     other.gameObject.GetComponent<Fruit>().destroyFruit( transform.position - prev_pos);
-                    mainScript.count++;
+                    mainScript.score++;
 
                 }
             }

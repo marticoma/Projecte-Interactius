@@ -222,12 +222,12 @@ SpriteRenderer:
   m_SortingLayerID: 67662869
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 547dba53127a9864795ae9d574e284a9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a6297679d0dc4c14abe3ba96a3e5706e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -608,15 +608,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 559384012}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 327474447c6ec2c479e51c4de5e6cd3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 0
+  score: 0
   lives: 0
   textCount: {fileID: 0}
-  textLives: {fileID: 0}
 --- !u!81 &559384014
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1286,7 +1285,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1338367453}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f41a29a8913b3149a45c3193decb564, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a4ddaf9a8ededf4fb39afb650fb4afb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fruitTypesList: 
@@ -1302,8 +1301,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.48, y: 1.05, z: 1.18}
-  m_Center: {x: 0, y: 0.0000000037252903, z: -0.01}
+  m_Size: {x: 0.35, y: 0.74, z: 0.86}
+  m_Center: {x: 0, y: 0.0000000037252903, z: 0.55}
 --- !u!1001 &1494339586
 PrefabInstance:
   m_ObjectHideFlags: 0
