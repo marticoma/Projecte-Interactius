@@ -11,8 +11,10 @@ public class TrackingReceiver : MonoBehaviour
     public GameObject nose;
     public GameObject wristR;
     public GameObject wristL;
-   public GameObject elbowR;
+    public GameObject elbowR;
     public GameObject elbowL;
+    public GameObject ankleR;
+    public GameObject ankleL;
     //OSC Variables
     private OSCReceiver _receiver;
     private const string _oscAddress = "/pose/0";
@@ -47,6 +49,8 @@ public class TrackingReceiver : MonoBehaviour
         pose.Add("leftWrist", Vector3.zero);
         pose.Add("rightElbow", Vector3.zero);
         pose.Add("leftElbow", Vector3.zero);
+        pose.Add("leftAnkle", Vector3.zero);
+        pose.Add("rightAnkle", Vector3.zero);
     }
     
 
@@ -58,6 +62,8 @@ public class TrackingReceiver : MonoBehaviour
         wristL.transform.position = pose["leftWrist"];
         elbowL.transform.position = pose["leftElbow"];
         elbowR.transform.position = pose["rightElbow"];
+        ankleR.transform.position = pose["rightAnkle"];
+        ankleL.transform.position = pose["leftAnkle"];
 
     }
 

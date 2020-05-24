@@ -134,11 +134,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 469140, guid: 9fa4b42aeea124c4aa345f7293d00504, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -300
       objectReference: {fileID: 0}
     - target: {fileID: 469140, guid: 9fa4b42aeea124c4aa345f7293d00504, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -350
       objectReference: {fileID: 0}
     - target: {fileID: 469140, guid: 9fa4b42aeea124c4aa345f7293d00504, type: 3}
       propertyPath: m_LocalPosition.z
@@ -194,7 +194,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &105782660
 Transform:
   m_ObjectHideFlags: 0
@@ -670,11 +670,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 475920, guid: deeb7cfc50acc7b42a640d56755f1235, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 475920, guid: deeb7cfc50acc7b42a640d56755f1235, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -350
       objectReference: {fileID: 0}
     - target: {fileID: 475920, guid: deeb7cfc50acc7b42a640d56755f1235, type: 3}
       propertyPath: m_LocalPosition.z
@@ -890,7 +890,7 @@ SpriteRenderer:
   m_SortingLayerID: 67662869
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 532e927f5094fff49a4ca4ff461028fd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 82d68bf4c6eda0a4fbd06350f5cda34a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1244,7 +1244,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &913629751
 Transform:
   m_ObjectHideFlags: 0
@@ -1471,7 +1471,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1020536397
 Transform:
   m_ObjectHideFlags: 0
@@ -1799,11 +1799,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 456442, guid: 9c894f93fe16fbc4ebb694388571cd8c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 456442, guid: 9c894f93fe16fbc4ebb694388571cd8c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -340.2
+      value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 456442, guid: 9c894f93fe16fbc4ebb694388571cd8c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2258,7 +2258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73238a5def7abb3468777ed41527b524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fruitTypesList: 000000000100000002000000
+  fruitTypesList: 02000000
   slashSpeedTolerance: 1
 --- !u!65 &1456485977
 BoxCollider:
@@ -2320,7 +2320,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1475439008
 Transform:
   m_ObjectHideFlags: 0
@@ -2372,8 +2372,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7, y: 0.45, z: 2.27}
-  m_Center: {x: 0, y: 0, z: 0.593}
+  m_Size: {x: 0.7, y: 0.45, z: 1.3854942}
+  m_Center: {x: -0, y: -0, z: 1.0352527}
 --- !u!114 &1530209924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2386,7 +2386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73238a5def7abb3468777ed41527b524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fruitTypesList: 
+  fruitTypesList: 01000000
   slashSpeedTolerance: 0
 --- !u!1 &1535896780 stripped
 GameObject:
@@ -2412,8 +2412,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73238a5def7abb3468777ed41527b524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fruitTypesList: 
+  fruitTypesList: 02000000
   slashSpeedTolerance: 1
+--- !u!65 &1535896783
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535896780}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.12823951, y: 0.7087947, z: 0.59454423}
+  m_Center: {x: 0.0000000047683715, y: -0.11624176, z: 0.5731992}
 --- !u!1 &1584358831
 GameObject:
   m_ObjectHideFlags: 0
@@ -2842,11 +2855,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 498918, guid: 3edd4005bea378c4ca826869dc2e5b95, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -200
       objectReference: {fileID: 0}
     - target: {fileID: 498918, guid: 3edd4005bea378c4ca826869dc2e5b95, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -337
+      value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 498918, guid: 3edd4005bea378c4ca826869dc2e5b95, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2935,7 +2948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73238a5def7abb3468777ed41527b524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fruitTypesList: 000000000100000002000000
+  fruitTypesList: 00000000
   slashSpeedTolerance: 1
 --- !u!1001 &1980674678
 PrefabInstance:
@@ -3180,8 +3193,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7, y: 0.287, z: 1.48}
-  m_Center: {x: 0, y: 0, z: 0.42}
+  m_Size: {x: 0.7, y: 0.287, z: 0.9394686}
+  m_Center: {x: 0, y: 0, z: 0.6902657}
 --- !u!114 &2066524070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3194,7 +3207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73238a5def7abb3468777ed41527b524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fruitTypesList: 
+  fruitTypesList: 01000000
   slashSpeedTolerance: 1
 --- !u!1 &2067680439 stripped
 GameObject:

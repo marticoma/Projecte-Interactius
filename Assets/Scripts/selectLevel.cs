@@ -27,15 +27,15 @@ public class selectLevel : MonoBehaviour
         // cut fruit
         if (other.CompareTag("Level1"))
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("Game1");
         }
         if (other.CompareTag("Level2"))
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("Game2");
         }
         if (other.CompareTag("Level3"))
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("Game3");
         }
         if (other.CompareTag("Level4"))
         {

@@ -9,6 +9,7 @@ public class Fruit : MonoBehaviour
 
     public GameObject particlesSys; // particle system prefab
     public static float fruitSpeed = 500;
+    private Vector3 rotation;
 
     public eFruitType type; // type of fruit
     float CheckForce()
@@ -26,10 +27,16 @@ public class Fruit : MonoBehaviour
     void Start()
     {
         float x = CheckForce();
-        float y = 25000 + Mathf.Abs(x);
+        float y = 22000 + Mathf.Abs(x/15*5);
+        if (Mathf.Abs(x/15*5) < 2000)
+        {
+            y += 5000;
+        }
         Vector3 force = new Vector3(x, y, 0);
         gameObject.GetComponent<Rigidbody>().AddForce(force);
         gameObject.GetComponent<Rigidbody>().useGravity = false;
+
+        rotation.Set(Random.Range(-45.0f, 45.0f), Random.Range(-45.0f, 45.0f),Random.Range(-45.0f, 45.0f));
 
 // better if we use velocity instead of initial forces
 //        float angle = Random.Range(-45.0f, 45.0f);
@@ -40,9 +47,10 @@ public class Fruit : MonoBehaviour
     void Update()
     {
         gameObject.GetComponent<Rigidbody>().AddForce(0, -50, 0);
+        transform.Rotate(rotation*Time.deltaTime*3);
 
         // if out of map -> destroy instance
-        if (gameObject.transform.position.y < -700)
+        if (gameObject.transform.position.y < -600)
             Destroy(gameObject, 0);
     }
 
