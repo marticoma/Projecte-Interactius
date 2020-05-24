@@ -58,7 +58,7 @@ public class Fruit : MonoBehaviour
    public void destroyFruit(Vector3 effectDirection){
         
         // instantiate particle system with a certain color
-        GameObject ps = Instantiate(particlesSys, transform.position, transform.rotation);
+        GameObject psobj = Instantiate(particlesSys, transform.position, transform.rotation);
         Vector3 rgb = new Vector3(0,0,0);
         switch(type){
             case eFruitType.RED:
@@ -71,11 +71,18 @@ public class Fruit : MonoBehaviour
                 rgb = new Vector3 (1.0f,1.0f,0.0f);
                 break;
             default:
+            {
+                ParticleSystem ps = psobj.GetComponent<ParticleSystem>();
+                var shape = ps.shape;
+                shape.shapeType = ParticleSystemShapeType.Sphere; 
+                //shape does not need to be put to psobj because unity does some magic
+
                 rgb = new Vector3(0.0f, 0.0f, 0.0f);
                 break;
+            }
         }
 
-        ps.GetComponent<ParticleSysBehaviour>().PlayParticles(effectDirection, rgb);
+        psobj.GetComponent<ParticleSysBehaviour>().PlayParticles(effectDirection, rgb);
         Destroy (gameObject, 0);
     }
 

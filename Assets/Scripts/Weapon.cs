@@ -5,8 +5,12 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     private MainScript mainScript;
+    private SoundManager soundManager;
     public List<Fruit.eFruitType> fruitTypesList = new List < Fruit.eFruitType>(); // fruit types that this weapon can destroy
-    public float slashSpeedTolerance;  // meter/milisec    tolerance to consider moving a Slash. 
+
+    public float slashSpeedTolerance;  // meter/milisec    tolerance to consider moving a Slash.
+    private float timeBetweenSlashSound; 
+    private float timerSlashSound;
     private Vector3 prev_pos;
     private bool didSlash; // if weapon attacked this is set to true 
     
@@ -15,7 +19,10 @@ public class Weapon : MonoBehaviour
     {
         didSlash = false;
         prev_pos = transform.position;   
+        timerSlashSound = 0.0f;
+        timeBetweenSlashSound = 0.46f;
         mainScript = MainScript.instance;
+        soundManager = SoundManager.instance;
     }
 
 
@@ -30,6 +37,7 @@ public class Weapon : MonoBehaviour
                 if (fruitTypesList[i] == fruitType){ // type found -> cut fruit
                     other.gameObject.GetComponent<Fruit>().destroyFruit( transform.position - prev_pos);
                     mainScript.score++;
+                    soundManager.PlayFruitCutClip();
 
                 }
             }
@@ -37,6 +45,7 @@ public class Weapon : MonoBehaviour
         if (other.CompareTag("Bomb")){
             other.gameObject.GetComponent<Fruit>().destroyFruit( new Vector3(0,0,1));
             mainScript.lives--;
+            soundManager.PlayBombClip();
         }
     }
 
@@ -44,12 +53,19 @@ public class Weapon : MonoBehaviour
         didSlash = false; // reset
         Vector3 movement = transform.position - prev_pos;
         float movementSpeed = movement.magnitude / (Time.deltaTime * 1000); // in meter/milisec
-        if (movementSpeed >= slashSpeedTolerance){ didSlash = true;}
+        if (movementSpeed >= slashSpeedTolerance){ 
+            didSlash = true;
+            if (timerSlashSound >= timeBetweenSlashSound){
+                timerSlashSound = 0;
+                SoundManager.instance.PlayKnifeMoveClip();
+            }
+        }
     }
     // Update is called once per frame
     void Update()
     {
         checkSlash(); // did weapon slash?
+        timerSlashSound += Time.deltaTime;        
         prev_pos = transform.position; // update previous position
     }
 }

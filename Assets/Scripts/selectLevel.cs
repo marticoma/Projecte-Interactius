@@ -20,13 +20,14 @@ public class selectLevel : MonoBehaviour
     }
 
 
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (!didSlash) return; // if did not slash, weapon cannot do anything
 
         // cut fruit
         if (other.CompareTag("Level1"))
         {
+ 
             SceneManager.LoadScene("Game1");
         }
         if (other.CompareTag("Level2"))
@@ -39,6 +40,8 @@ public class selectLevel : MonoBehaviour
         }
         if (other.CompareTag("Level4"))
         {
+            DataContainerBetweenScenes.lives = 10;
+            DataContainerBetweenScenes.timer = 90.0f;
             SceneManager.LoadScene("SampleScene");
         }
     }
