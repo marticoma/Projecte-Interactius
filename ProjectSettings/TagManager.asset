@@ -8,6 +8,12 @@ TagManager:
   - FruitTag
   - GreenFruit
   - Bomb
+  - Level4
+  - Level3
+  - Level2
+  - Level1
+  - Restart
+  - GoToMain
   layers:
   - Default
   - TransparentFX

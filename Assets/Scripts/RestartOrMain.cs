@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class selectLevel : MonoBehaviour
+public class RestartOrMain : MonoBehaviour
 {
+
     private MainScript mainScript;
-    public List<Fruit.eFruitType> fruitTypesList = new List<Fruit.eFruitType>(); // fruit types that this weapon can destroy
     public float slashSpeedTolerance;  // meter/milisec    tolerance to consider moving a Slash. 
     private Vector3 prev_pos;
     private bool didSlash; // if weapon attacked this is set to true 
@@ -25,28 +25,14 @@ public class selectLevel : MonoBehaviour
         if (!didSlash) return; // if did not slash, weapon cannot do anything
 
         // cut fruit
-        if (other.CompareTag("Level1"))
+        if (other.CompareTag("Restart"))
         {
-            DataContainerBetweenScenes.level = 1;
-        }
-        if (other.CompareTag("Level2"))
-        {
-            DataContainerBetweenScenes.level = 2;
-        }
-        if (other.CompareTag("Level3"))
-        {
-            DataContainerBetweenScenes.level = 3;
-        }
-        if (other.CompareTag("Level4"))
-        {
-            DataContainerBetweenScenes.level = 4;
-        }
-
-        if(DataContainerBetweenScenes.level != -1)
-        {
-            DataContainerBetweenScenes.lives = 10;
-            DataContainerBetweenScenes.timer = 90.0f;
             SceneManager.LoadScene("Game");
+        }
+        if (other.CompareTag("GoToMain"))
+        {
+            DataContainerBetweenScenes.level = -1;
+            SceneManager.LoadScene("Menu");
         }
     }
 

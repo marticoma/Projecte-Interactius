@@ -21,7 +21,6 @@ public class MainScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         score = 0;
         lives = DataContainerBetweenScenes.lives;
         timer = DataContainerBetweenScenes.timer;
@@ -32,7 +31,5 @@ public class MainScript : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
-
-    
     }
 }
