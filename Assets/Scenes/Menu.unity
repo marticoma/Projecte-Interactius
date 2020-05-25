@@ -1345,8 +1345,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.35, y: 0.74, z: 0.86}
-  m_Center: {x: 0, y: 0.0000000037252903, z: 0.55}
+  m_Size: {x: 0.54, y: 0.74, z: 1.41}
+  m_Center: {x: 0, y: 0.0000000037252903, z: 0.16}
 --- !u!1001 &1494339586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1662,6 +1662,8 @@ MonoBehaviour:
   elbowL: {fileID: 1936449271}
   ankleR: {fileID: 1139507586}
   ankleL: {fileID: 306818668}
+  kneeR: {fileID: 113307128}
+  kneeL: {fileID: 1936449271}
 --- !u!4 &1834813959
 Transform:
   m_ObjectHideFlags: 0
