@@ -21,6 +21,8 @@ public class TrackingReceiver : MonoBehaviour
     private OSCReceiver _receiver;
     private const string _oscAddress = "/pose/0";
 
+    public float scale;
+
     //Dictionary to store pose data
     public Dictionary<string, Vector3> pose = new Dictionary<string, Vector3>();
 
@@ -61,7 +63,7 @@ public class TrackingReceiver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        nose.transform.position = pose["nose"];
+        nose.transform.position = pose["nose"] * scale;
         wristR.transform.position = pose["rightWrist"];
         wristL.transform.position = pose["leftWrist"];
         elbowL.transform.position = pose["leftElbow"];
@@ -86,9 +88,9 @@ public class TrackingReceiver : MonoBehaviour
             OSCValue val0 = list.ElementAt(i);
             if (val0.Type == OSCValueType.String) key = val0.StringValue;
             OSCValue val1 = list.ElementAt(i+1);
-            if (val1.Type == OSCValueType.Float) position.x = val1.FloatValue-250;
+            if (val1.Type == OSCValueType.Float) position.x = val1.FloatValue - 250;
             OSCValue val2 = list.ElementAt(i+2);
-            if (val2.Type == OSCValueType.Float) position.y = -(val2.FloatValue-250);
+            if (val2.Type == OSCValueType.Float) position.y = -(val2.FloatValue - 250);
 
             if (pose.ContainsKey(key)) {
                 pose[key] = position; 
