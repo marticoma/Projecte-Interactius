@@ -2675,7 +2675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd1f45f42f155c84097ad65ac60fba40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slashSpeedTolerance: 1
+  slashSpeedTolerance: 0.2
 --- !u!65 &1456485977
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2831,7 +2831,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fruitTypesList: 01000000
-  slashSpeedTolerance: 1
+  slashSpeedTolerance: 0.2
 --- !u!1 &1535896780 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 126836, guid: deeb7cfc50acc7b42a640d56755f1235,
@@ -3375,7 +3375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd1f45f42f155c84097ad65ac60fba40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slashSpeedTolerance: 1
+  slashSpeedTolerance: 0.2
 --- !u!1001 &1980674678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3606,6 +3606,7 @@ MonoBehaviour:
   ankleL: {fileID: 1463356793}
   kneeR: {fileID: 729124317}
   kneeL: {fileID: 1818920557}
+  scale: 2
 --- !u!1 &2066524066 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 140334, guid: 9c894f93fe16fbc4ebb694388571cd8c,
@@ -3651,7 +3652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fruitTypesList: 01000000
-  slashSpeedTolerance: 1
+  slashSpeedTolerance: 0.2
 --- !u!1 &2067680439 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1541859410316496, guid: 4fe5a7bcbee1651418ea031a87ff53e4,
