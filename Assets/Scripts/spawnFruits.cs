@@ -34,7 +34,7 @@ public class spawnFruits : MonoBehaviour
     }
         
 
-        int index_fruit = Random.Range(0, fruitPrefab.Count);
+        int index_fruit = Random.Range(0, fruitPrefab.Count -1);
         Vector3 pos_fruit = new Vector3(Random.Range(lim_x_neg, lim_x_pos), start_y+10, Z);
         Instantiate(fruitPrefab[index_fruit], pos_fruit, fruitPrefab[index_fruit].transform.rotation); 
     }

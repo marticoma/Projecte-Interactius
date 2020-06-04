@@ -39,6 +39,7 @@ public class selectLevel : MonoBehaviour
         }
         if (other.CompareTag("Level4"))
         {
+            DataContainerBetweenScenes.change_weapon_ingame = true;
             DataContainerBetweenScenes.level = 4;
         }
 

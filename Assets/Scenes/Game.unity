@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2591,7 +2591,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4411128782263238, guid: 426b44a7575f71e479fab4f4e8431989, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 148
+      value: 169
       objectReference: {fileID: 0}
     - target: {fileID: 4411128782263238, guid: 426b44a7575f71e479fab4f4e8431989, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2634,6 +2634,21 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5600342347730431282, guid: 426b44a7575f71e479fab4f4e8431989,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.016
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600342347730431282, guid: 426b44a7575f71e479fab4f4e8431989,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.016
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600342347730431282, guid: 426b44a7575f71e479fab4f4e8431989,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.016
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2246720764385632606, guid: 426b44a7575f71e479fab4f4e8431989, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 426b44a7575f71e479fab4f4e8431989, type: 3}
@@ -2661,7 +2676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73238a5def7abb3468777ed41527b524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fruitTypesList: 02000000
+  fruitTypesList: 000000000100000002000000
   slashSpeedTolerance: 1
 --- !u!114 &1456485975
 MonoBehaviour:
@@ -2830,7 +2845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73238a5def7abb3468777ed41527b524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fruitTypesList: 01000000
+  fruitTypesList: 000000000100000002000000
   slashSpeedTolerance: 0.2
 --- !u!1 &1535896780 stripped
 GameObject:
@@ -2856,7 +2871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73238a5def7abb3468777ed41527b524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fruitTypesList: 02000000
+  fruitTypesList: 000000000100000002000000
   slashSpeedTolerance: 1
 --- !u!65 &1535896783
 BoxCollider:
@@ -3361,7 +3376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73238a5def7abb3468777ed41527b524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fruitTypesList: 00000000
+  fruitTypesList: 000000000100000002000000
   slashSpeedTolerance: 1
 --- !u!114 &1935386325
 MonoBehaviour:
@@ -3375,7 +3390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd1f45f42f155c84097ad65ac60fba40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slashSpeedTolerance: 0.2
+  slashSpeedTolerance: 0
 --- !u!1001 &1980674678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3651,7 +3666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73238a5def7abb3468777ed41527b524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fruitTypesList: 01000000
+  fruitTypesList: 000000000100000002000000
   slashSpeedTolerance: 0.2
 --- !u!1 &2067680439 stripped
 GameObject:
@@ -3752,6 +3767,21 @@ PrefabInstance:
     - target: {fileID: 4863069348827460, guid: 63e523ab5d9ce7348b431ae1d689a54d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 281392876332156405, guid: 63e523ab5d9ce7348b431ae1d689a54d,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.016
+      objectReference: {fileID: 0}
+    - target: {fileID: 281392876332156405, guid: 63e523ab5d9ce7348b431ae1d689a54d,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.016
+      objectReference: {fileID: 0}
+    - target: {fileID: 281392876332156405, guid: 63e523ab5d9ce7348b431ae1d689a54d,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.016
       objectReference: {fileID: 0}
     - target: {fileID: 1679582915224115695, guid: 63e523ab5d9ce7348b431ae1d689a54d,
         type: 3}

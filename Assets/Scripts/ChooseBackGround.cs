@@ -17,7 +17,7 @@ public class ChooseBackGround : MonoBehaviour
         }
         else
         {
-            background.sprite = backs[DataContainerBetweenScenes.level];
+            background.sprite = backs[DataContainerBetweenScenes.level -1];
         }
     }
 }
