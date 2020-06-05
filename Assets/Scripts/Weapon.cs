@@ -9,8 +9,6 @@ public class Weapon : MonoBehaviour
     public List<Fruit.eFruitType> fruitTypesList = new List < Fruit.eFruitType>(); // fruit types that this weapon can destroy
 
     public float slashSpeedTolerance;  // meter/milisec    tolerance to consider moving a Slash.
-    private float timeBetweenSlashSound; 
-    private float timerSlashSound;
     private Vector3 prev_pos;
     private bool didSlash; // if weapon attacked this is set to true 
     
@@ -19,8 +17,6 @@ public class Weapon : MonoBehaviour
     {
         didSlash = false;
         prev_pos = transform.position;   
-        timerSlashSound = 0.0f;
-        timeBetweenSlashSound = 0.46f;
         mainScript = MainScript.instance;
         soundManager = SoundManager.instance;
     }
@@ -53,19 +49,12 @@ public class Weapon : MonoBehaviour
         didSlash = false; // reset
         Vector3 movement = transform.position - prev_pos;
         float movementSpeed = movement.magnitude / (Time.deltaTime * 1000); // in meter/milisec
-        if (movementSpeed >= slashSpeedTolerance){ 
-            didSlash = true;
-            if (timerSlashSound >= timeBetweenSlashSound){
-                timerSlashSound = 0;
-                SoundManager.instance.PlayKnifeMoveClip();
-            }
-        }
+        if (movementSpeed >= slashSpeedTolerance){  didSlash = true;  }
     }
     // Update is called once per frame
     void Update()
     {
-        checkSlash(); // did weapon slash?
-        timerSlashSound += Time.deltaTime;        
+        checkSlash(); // did weapon slash?        
         prev_pos = transform.position; // update previous position
     }
 }

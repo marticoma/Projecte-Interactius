@@ -28,24 +28,30 @@ public class selectLevel : MonoBehaviour
         if (other.CompareTag("Level1"))
         {
             DataContainerBetweenScenes.level = 1;
+            DataContainerBetweenScenes.lives = 10;
+
         }
         if (other.CompareTag("Level2"))
         {
             DataContainerBetweenScenes.level = 2;
+            DataContainerBetweenScenes.lives = 7;
         }
         if (other.CompareTag("Level3"))
         {
             DataContainerBetweenScenes.level = 3;
+            DataContainerBetweenScenes.lives = 5;
+
         }
         if (other.CompareTag("Level4"))
         {
             DataContainerBetweenScenes.change_weapon_ingame = true;
             DataContainerBetweenScenes.level = 4;
+            DataContainerBetweenScenes.lives = 3;
+
         }
 
         if(DataContainerBetweenScenes.level != -1)
         {
-            DataContainerBetweenScenes.lives = 10;
             DataContainerBetweenScenes.timer = 90.0f;
             SceneManager.LoadScene("Game");
         }
