@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3359,8 +3359,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.32, y: 0.38, z: 0.62}
-  m_Center: {x: 0, y: 0.0000000037252903, z: 0.65}
+  m_Size: {x: 0.3, y: 0.66, z: 0.51}
+  m_Center: {x: 0, y: 0.0000000037252903, z: 0.61}
 --- !u!114 &1935386324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3387,7 +3387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd1f45f42f155c84097ad65ac60fba40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slashSpeedTolerance: 1
+  slashSpeedTolerance: 0
 --- !u!1001 &1980674678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3720,6 +3720,10 @@ PrefabInstance:
     - target: {fileID: 1724972533694550, guid: 63e523ab5d9ce7348b431ae1d689a54d, type: 3}
       propertyPath: m_TagString
       value: GoToMain
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724972533694550, guid: 63e523ab5d9ce7348b431ae1d689a54d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4863069348827460, guid: 63e523ab5d9ce7348b431ae1d689a54d, type: 3}
       propertyPath: m_LocalPosition.x
