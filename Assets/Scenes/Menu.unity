@@ -1333,7 +1333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fruitTypesList: 
-  slashSpeedTolerance: 1
+  slashSpeedTolerance: 0
 --- !u!65 &1338367456
 BoxCollider:
   m_ObjectHideFlags: 0
